@@ -1,0 +1,18 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  host: localhost
+  database: curry
+  pool: 5
+  timeout: 5000
+  username: root
+  password:
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default

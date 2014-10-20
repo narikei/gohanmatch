@@ -1,0 +1,12 @@
+%ul
+  - @match_users.each do |match_user|
+    :ruby
+      if match_user.to_user_id == login_user_id
+        user = match_user.from_user
+      else
+        user = match_user.to_user
+      end
+    %li.p-user_list{:class => "#{:unread if(login_user.match_user_ids.to_a.index(user.id.to_s).present?)}"}
+      %a.tx-ellipsis{:href => "/chats/#{user.id}"}
+        %img.p-user_list__img{:src => user.image, :width => 64, :height => 64}
+        %span.p-user_list__name= user.nickname

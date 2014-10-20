@@ -1,0 +1,28 @@
+.hide{
+    display: none;
+}
+
+.tx-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.ib{
+    display: inline-block;
+}
+
+.fr{
+    float: right;
+}
+.fl{
+    float: left;
+}
+
+.vm{
+    vertical-align: middle;
+}
+.vb{
+    vertical-align: bottom;
+}

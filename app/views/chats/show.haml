@@ -1,0 +1,27 @@
+%div.p-box
+  あなたとごはんを食べたい同士になっています。
+%ul#js-chat_content.p-chat_content.cf
+  - @chats.each do |chat|
+    - if chat.user_id == login_user_id
+      %li.p-chat_content__item.my
+        %div.p-chat_content__name
+          %span.ib.vm= chat.user.nickname
+        %p.p-chat_content__text= chat.content
+        %p.p-chat_content__time= chat.created_at.strftime("%H:%m")
+    - else
+      %li.p-chat_content__item.your
+        %div.p-chat_content__name
+          %img{:src => chat.user.image, :width => 34, :height => 34}
+          %span.ib.vm= chat.user.nickname
+        %p.p-chat_content__text= chat.content
+        %p.p-chat_content__time= chat.created_at.strftime("%H:%m")
+      
+      
+
+%div.p-chat__comment
+  = form_for @chat do
+    = hidden_field :chat, :early_user_id
+    = hidden_field :chat, :late_user_id
+    %div.p-chat__comment__box.cf
+      = text_area(:chat, :content, :placeholder => "コメントする♪", :required => :required, :class => "p-chat__comment__textbox")
+      = submit_tag "送信", :class => "p-chat__comment__submit"

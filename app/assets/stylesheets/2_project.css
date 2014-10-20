@@ -1,0 +1,306 @@
+.p-header{
+  position: relative;
+  z-index: 10;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  background: #e74c3c;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,.5);
+  overflow: hidden;
+}
+.p-header__title{
+  width: 100%;
+  margin-left: -44px;
+  padding-left: 88px;
+  box-sizing: border-box;
+}
+.p-header__icon{
+  display: block;
+  height: 38px;
+  width: 38px;
+  padding: 3px;
+}
+.p-header__center{
+  float: right;
+  margin-right: -22px;
+  padding-right: 50%;
+}
+
+.p-content{
+  position: absolute;
+  top: 0;
+  box-sizing: border-box;
+  height: 100%;
+  min-height: 450px;
+  width: 100%;
+  min-width: 300px;
+  padding-top: 44px;
+  overflow: hidden;
+}
+
+.p-card{
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+.p-card__item{
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  box-sizing: border-box;
+  width: 90%;
+  height: 370px;
+  margin-top: -185px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 0 1px black;
+  overflow: hidden;
+  opacity: 0;
+  transition: .7s;
+}
+.p-card__item:nth-child(4){
+  z-index: 102;
+  top: 51%;
+  left: 9%;
+  width: 82%;
+  opacity: .7;
+}
+.p-card__item:nth-child(3){
+  z-index: 103;
+  top: 52%;
+  left: 9%;
+  width: 82%;
+  opacity: .8;
+}
+.p-card__item:nth-child(2){
+  z-index: 104;
+  top: 51%;
+  left: 7%;
+  width: 86%;
+  opacity: 1;
+}
+.p-card__item:nth-child(1),
+.p-card__item.first{
+  z-index: 105;
+  top: 50%;
+  left: 5%;
+  width: 90%;
+  opacity: 1;
+}
+.p-card__item img{
+  height: auto;
+}
+.p-card__item__name{
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: left;
+}
+.p-card__item__btn{
+  height: 60px;
+  width: 100%;
+}
+.p-card__item__yep,
+.p-card__item__nope{
+  box-sizing: border-box;
+  border: 0;
+  background: #0ff;  
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+.p-card__item__yep{
+  height: 44px;
+  width: 50%;
+  margin: 8px 2%;
+  background: #e74c3c;
+}
+.p-card__item__nope{
+  height: 32px;
+  width: 35%;
+  margin: 14px 2%;
+  background: #2ecc71;
+}
+
+
+
+.p-user_list{
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+}
+.p-user_list.unread{
+  background: #FFD;
+}
+.p-user_list a{
+  display: block;
+  padding: 5px 18px;
+  line-height: 74px;
+  font-size: 18px;
+}
+.p-user_list__img{
+  margin-right: 1em;
+  border-radius: 32px;
+  vertical-align: middle;
+  box-shadow: 0 0 1px black;
+}
+.p-user_list__name{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+.p-chat_content{
+  margin-bottom: 64px;
+}
+.p-chat_content__item{
+  width: 80%;
+  margin: 5px 3%;
+}
+.p-chat_content__item.my{
+  float: right;
+}
+.p-chat_content__item.your{
+  float: left;
+}
+.p-chat_content__text{
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 1.75;
+  letter-spacing: .1em;
+  word-break: break-all;
+  white-space: pre-line;
+  background: #fff;
+  box-shadow: 0 0 1px rgba(0,0,0,.3);
+}
+.p-chat_content__name{
+  display: block;
+  margin: 5px 0;
+  text-align: left;
+  font-size: 11px;
+  color: #333;
+}
+.p-chat_content__name img{
+  border-radius: 16px;
+  vertical-align: middle;
+  box-shadow: 0 0 1px black;
+}
+.p-chat_content__name span{
+  margin-left: 1em;
+}
+.p-chat_content__time{
+  display: block;
+  margin: 5px;
+  text-align: right;
+  font-size: 9px;
+  color: #666;
+}
+
+
+.p-chat__comment{
+  position: fixed;
+  bottom: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  background: #fff
+}
+.p-chat__comment__box{
+  position: relative;
+}
+.p-chat__comment__textbox{
+  display: block;
+  float: left;
+  box-sizing: border-box;
+  height: 32px;
+  width: 85%;
+  margin: 0;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  vertical-align: bottom;
+  font-size: 16px;
+  background: #fff;
+  transition: .5s;
+}
+.p-chat__comment__textbox:focus{
+  height: 100px;
+}
+.p-chat__comment__submit{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: block;
+  box-sizing: border-box;
+  height: 32px;
+  width: 14%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 14px;
+  text-align: center;
+  background: none;
+}
+
+.p-login{
+  margin: 20px;
+  text-align: center;
+}
+.p-login__description{
+  font-size: 16px;
+  font-weight: bold;
+}
+.p-login__btn{
+  display: block;
+  width: 148px;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 15px;
+  line-height: 24px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  background: #4864b9;
+  color: #fff;
+}
+.p-login__btn:before{
+  display: inline-block;
+  content: "f";
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  padding: 5px;
+  border-radius: 24px;
+  font-family: 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+  font-size: 24px;
+  color: #4864b9;
+  background: #fff;
+}
+
+.p-box{
+  margin: 10px;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-size: 14px;
+  background: #fff;
+  box-shadow: 0 0 1px rgba(0,0,0,.5);
+}
+.p-popup{
+  position: absolute;
+  top: 38px;
+  right: 10px;
+  z-index: 99999;
+  width: 260px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  background: #fff;
+  box-shadow: 0 0 3px rgba(0,0,0,.5);
+}

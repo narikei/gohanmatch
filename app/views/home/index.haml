@@ -1,0 +1,14 @@
+- if login_user
+  = render :partial => 'match/index'
+
+- else
+  %div.p-login
+    
+    %img{:src => "/assets/logo.png", :height => 300, :width => 300}
+
+    %p.p-login__description
+      ごはんを食べに行きたい、
+      %br
+      友人同士をマッチングするサービス
+    %a.p-login__btn{:href => "/auth/facebook"} ログイン
+  

@@ -1,0 +1,15 @@
+%div.p-content
+  %div#js-candidacy_user.p-card
+  %script#tpl-candidacy_user{:type => "text/template"}
+    %div.p-card__item
+      %img{:src => "{{ image }}", :width => 275, :height => 275, :alt => nil}
+      %p.p-card__item__name
+        {{ nickname }}
+      %div.js-nope.p-card__item__btn
+        %button#js-nope.p-card__item__nope{"data-id" => "{{ id }}"}>< いいえ
+        %button#js-yep.p-card__item__yep{"data-id" => "{{ id }}"}>< 食べたい
+
+%div#js-new_match.hide.p-popup
+  新しくあなたとごはんを
+  %br
+  食べたい同士になった人がいます！

@@ -1,0 +1,32 @@
+body{
+    line-height: 1.35;
+    font-family: futura, Helvetica, Arial, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+    font-size: 12px;
+    background: #f3f3f3;
+    color: #212121;
+    word-wrap: break-word;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+input{
+    border: 0;
+}
+
+
+/* clearfix
+  Micro Clearfix(http://nicolasgallagher.com/micro-clearfix-hack/)
+*/
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {
+    clear: both;
+}
